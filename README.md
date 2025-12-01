@@ -31,12 +31,6 @@ Shows distinct price ranges for EUR, AUD, and USD, with EUR tightly clustered, A
 ### 2. Time-Series Price Movements
 All three currencies follow similar long-term trends but maintain consistent separation in their absolute price levels throughout the year.
 
-### 3. 3. Return Behavior
-Simple returns and log returns show:
-- AUD has the largest variability
-- EUR is the most stable
-- USD sits in the middle
-
 ### 4. Hour-of-Day and Global Session Patterns
 Strong time-based signals:
 - AUD appears mostly during EU daytime hours
@@ -51,8 +45,6 @@ The model uses the following engineered features:
 
 - `PRICE`  
 - `PRICE_Z` (normalized price)  
-- `RETURNS` (percent change)  
-- `LOG_RETURN`  
 - `HOUR`  
 - `DAY_OF_WEEK`  
 - `SESSION_ASIA`, `SESSION_EU`, `SESSION_US` (one-hot)
@@ -67,8 +59,8 @@ The final model only uses features that can be computed from a single input.
 - Split the data using `train_test_split` with `stratify=y`.
 - Trained a Gradient Boosting model with the following tuned hyperparameters:
   - `n_estimators=300`  
-  - `learning_rate=0.05`  
-  - `max_depth=2`
+  - `learning_rate=0.02`  
+  - `max_depth=3`
 
 Validation accuracy: **~98.77%**
 
