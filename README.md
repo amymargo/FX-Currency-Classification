@@ -20,9 +20,9 @@ All three currencies follow similar long-term trends but maintain consistent sep
 
 ### 4. Hour-of-Day and Global Session Patterns
 Strong time-based signals:
-- AUD appears mostly during AU daytime hours
-- EUR appears heavily during late-night + early-morning
-- USD concentrates later in the day
+- AUD appears almost exclusively during daytime hours and fully dominates the AU session
+- EUR appears heavily during late-night + early-morning making it dominant in the EU session and a major presence in the US session
+- USD concentrates around midnight, placing most of its activity into the US session and some into the EU session
 
 ### 5. Day-of-Week Patterns
 - AUD is only quoted on weekdays
